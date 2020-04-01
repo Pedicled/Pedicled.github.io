@@ -148,6 +148,104 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Mybatis学习总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/07/Mybatis学习总结/">Mybatis学习总结（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/07/Mybatis学习总结/" class="archive-article-date">
+  	<time datetime="2019-04-07T12:31:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Myabtis框架是一种ORM（对象关系映射）框架，描述Java对象与数据库某表之间的映射关系，自动将Java中的对象，<strong>持久化</strong>到关系型数据库的表中。</p>
+<p>Q：Hibernate与Myabtis区别？</p>
+<p>A1：Hibernate是全表映射的框架，只需定义好持久化对象到关系型数据库的表中的映射关系，就可以直接完成持久层操作；不需熟练掌握SQL语句；开发效率高于Myabtis；只适合在场景不太复杂或性能要求不高的项目使用。<br>A2：Mybatis是半自动映射的框架，需手动配置POJO、SQL、映射关系；工作量大；可配置动态SQL并优化；支持存储过程。</p>
+<h4 id="Mybatis工作原理"><a href="#Mybatis工作原理" class="headerlink" title="Mybatis工作原理"></a>Mybatis工作原理</h4><p>1.读配置文件mybatis-config.xml；<br>2.加载映射文件XXXmapper.xml;<br>3.sqlSessionFactory–&gt;sqlSession;<br>4.Executor;<br>5.(4)返回MappedStatement对象。</p>
+<h2 id="配置log4j-properties"><a href="#配置log4j-properties" class="headerlink" title="配置log4j.properties"></a>配置log4j.properties</h2><p>log4j输出日志信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Global logging configuration	//全局日志配置</span><br><span class="line">log4j.rootLogger=ERROR, stdout </span><br><span class="line"># MyBatis logging configuration... 	//Mybatis日志配置</span><br><span class="line">log4j.logger.com.itheima=DEBUG</span><br><span class="line"># Console output... 	//控制台输出</span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender </span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout </span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n</span><br></pre></td></tr></table></figure></p>
+<h2 id="定制持久化类"><a href="#定制持久化类" class="headerlink" title="定制持久化类"></a>定制持久化类</h2><p>如Customer类，定义属性（id,username,phone）、方法（getter,setter）。</p>
+<h2 id="核心配置文件mybatis-config-xml"><a href="#核心配置文件mybatis-config-xml" class="headerlink" title="核心配置文件mybatis-config.xml"></a>核心配置文件mybatis-config.xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//工具类</span><br><span class="line">public class MybatisUtils&#123;</span><br><span class="line"> private static SqlSessionFactory sqlSessionFactory=null;</span><br><span class="line"> static&#123;</span><br><span class="line">  try&#123;</span><br><span class="line">   Reader reader = Resources.getResourceAsReader(&quot;mybatis-config.xml&quot;);</span><br><span class="line">   sqlSessionFactory = new SqlSessionFactoryBuilder.build(reader);</span><br><span class="line">  &#125;</span><br><span class="line">  catch(Exception e)</span><br><span class="line">  &#123; e.printStackTrace(); &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> public static SqlSession getSession()&#123;</span><br><span class="line">  return sqlSessionFactory.openSession();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>SqlSessionFactory是线程安全的，若多次创建同一个数据库的SqlSessionFactory，则数据库资源将被耗尽。</li>
+<li>及时使用sqlSession.close()</li>
+</ul>
+<ol>
+<li><strong>properties</strong>：读取外部xx.properties文件；</li>
+<li>settings：用于改变Mybatis运行时的行为，如缓存全局开关、延迟加载的全局开关…；</li>
+<li>typeAliases：为Java类起别名，package name=”package[.class]”；</li>
+<li>typeHandler：javaType←—–→jdbcType；</li>
+<li>objectFactory：实例化目标类；</li>
+<li>plugins：配置用户所开发的插件；</li>
+<li>environments：子元素environment，配置dataSource、transactionManager；<ul>
+<li>UNPOOLED：每次被请求时会打开和关闭连接。</li>
+<li>POOLED：避免了在创建新的连接实例时所需的初始化和认证时间，使并发Web应用可以快速的响应请求；</li>
+<li>JNDI：容器可集中在外部配置数据源。<br>8.mappers：指定映射文件的位置。</li>
+</ul>
+</li>
+</ol>
+<h2 id="映射文件"><a href="#映射文件" class="headerlink" title="映射文件"></a>映射文件</h2><p>XXXCustomerMapper.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;mapper namespace=&quot;package&quot;&gt;</span><br><span class="line"> &lt;select id=&quot;...&quot; parameterType=&quot;...&quot; resultType=&quot;...&quot;&gt;</span><br><span class="line">  SQL语句;</span><br><span class="line"> &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br><span class="line"></span><br><span class="line">// #&#123;&#125;表示占位符，括号内是待接受参数名</span><br><span class="line">// $&#123;&#125;表示原样输出</span><br></pre></td></tr></table></figure></p>
+<h4 id="select"><a href="#select" class="headerlink" title="select"></a>select</h4><ul>
+<li>id：唯一标识符；</li>
+<li>parameterType：传入SQL语句的参数类型；</li>
+<li>resultType：从SQL语句中返回的返回类型；</li>
+<li>resultMap：用于持久化对象和数据库属性关联，多表关联；</li>
+</ul>
+<h4 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h4><ul>
+<li>keyProperty：将SQL语句的返回值给PO类的某个属性，通常设置为主键对应属性；</li>
+<li>keyColun：用于设置第几列是主键；</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/07/Mybatis学习总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-一些杂谈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -617,6 +715,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生成对抗网络（GAN）、CNN、时间循环神经网络、分词</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

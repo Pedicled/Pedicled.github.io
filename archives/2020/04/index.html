@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://pngiu.tech">
-  <title>H5+SSM项目遇到过的坑 | pngiu</title>
+  <title>Archives: 2020/4 | pngiu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日期转换——TimeStamp&amp;lt;&amp;lt;==&amp;gt;&amp;gt;DateJS JS中，TimeStamp转Date（代码来源于网络）：  12345678910111213141516171819202122232425function timestampToDateTime(timestamp = Date.now(), format = &amp;apos;yyyy-MM-dd HH:mm:ss&amp;a">
+  <meta name="description" content="双非本科在读，总想提升自己，还在道路上迷茫。">
 <meta name="keywords" content="考研">
-<meta property="og:type" content="article">
-<meta property="og:title" content="H5+SSM项目遇到过的坑">
-<meta property="og:url" content="http://pngiu.tech/2019/11/16/H5+SSM的坑/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="pngiu">
+<meta property="og:url" content="http://pngiu.tech/archives/2020/04/index.html">
 <meta property="og:site_name" content="pngiu">
-<meta property="og:description" content="日期转换——TimeStamp&amp;lt;&amp;lt;==&amp;gt;&amp;gt;DateJS JS中，TimeStamp转Date（代码来源于网络）：  12345678910111213141516171819202122232425function timestampToDateTime(timestamp = Date.now(), format = &amp;apos;yyyy-MM-dd HH:mm:ss&amp;a">
+<meta property="og:description" content="双非本科在读，总想提升自己，还在道路上迷茫。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-26T07:58:19.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="H5+SSM项目遇到过的坑">
-<meta name="twitter:description" content="日期转换——TimeStamp&amp;lt;&amp;lt;==&amp;gt;&amp;gt;DateJS JS中，TimeStamp转Date（代码来源于网络）：  12345678910111213141516171819202122232425function timestampToDateTime(timestamp = Date.now(), format = &amp;apos;yyyy-MM-dd HH:mm:ss&amp;a">
+<meta name="twitter:title" content="pngiu">
+<meta name="twitter:description" content="双非本科在读，总想提升自己，还在道路上迷茫。">
   
     <link rel="alternative" href="/atom.xml" title="pngiu" type="application/atom+xml">
   
@@ -147,187 +146,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-H5+SSM的坑" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      H5+SSM项目遇到过的坑
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/01/法律文书生成/" class="archive-article-date">
+  	<time datetime="2020-04-01T01:43:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/01/法律文书生成/">法律文书生成</a>
     </h1>
   
 
-        
-        <a href="/2019/11/16/H5+SSM的坑/" class="archive-article-date">
-  	<time datetime="2019-11-16T02:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日期转换——TimeStamp-lt-lt-gt-gt-Date"><a href="#日期转换——TimeStamp-lt-lt-gt-gt-Date" class="headerlink" title="日期转换——TimeStamp&lt;&lt;==&gt;&gt;Date"></a>日期转换——TimeStamp&lt;&lt;==&gt;&gt;Date</h2><h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ol>
-<li>JS中，TimeStamp转Date（代码来源于网络）：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function timestampToDateTime(timestamp = Date.now(), format = &apos;yyyy-MM-dd HH:mm:ss&apos;) &#123;</span><br><span class="line">    if (isNaN(timestamp)) &#123;</span><br><span class="line">        return &apos;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   if (format.length &lt; 4 || &apos;yyyy-MM-dd HH:mm:ss&apos;.indexOf(format) !== 0) &#123;</span><br><span class="line">        return &apos;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    const date = new Date(Number(timestamp));</span><br><span class="line"></span><br><span class="line">    const year = date.getFullYear();</span><br><span class="line">    const month = date.getMonth() + 1;</span><br><span class="line">    const day = date.getDate();</span><br><span class="line">    const hour = date.getHours();</span><br><span class="line">    const minute = date.getMinutes();</span><br><span class="line">    const second = date.getSeconds();</span><br><span class="line"></span><br><span class="line">    return format.replace(&apos;yyyy&apos;, year)</span><br><span class="line">    .replace(&apos;MM&apos;, month &gt; 9 ? month : `0$&#123;month&#125;`)</span><br><span class="line">    .replace(&apos;dd&apos;, day &gt; 9 ? day : `0$&#123;day&#125;`)</span><br><span class="line">    .replace(&apos;HH&apos;, hour &gt; 9 ? hour :`0$&#123;hour&#125;`)</span><br><span class="line">    .replace(&apos;mm&apos;, minute &gt; 9 ? minute : `0$&#123;minute&#125;`)</span><br><span class="line">    .replace(&apos;ss&apos;, second &gt; 9 ? second : `0$&#123;second&#125;`);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Vue中，使用render函数，给tooltip设置属性时，“max-width”中的‘-’不可用，需改成“maxWidth”驼峰式。</li>
-</ol>
-<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><ol>
-<li>Tomcat启动失败(A child container failed during start)。</li>
-</ol>
-<blockquote>
-<p>操作：修改Controller后报错，在该tomcat下，remove项目，进行clean操作。然后无法正常启动Tomcat。</p>
-<p>原因：webapps下不存在当前项目。</p>
-<p>处理：add项目后，先单击Publish发布项目，即可正常运行。</p>
-</blockquote>
-<ol start="2">
-<li>Tomcat日常异常。</li>
-</ol>
-<blockquote>
-<p>报错：“找不到相应实体类”。</p>
-<p>处理：删除webapps下当前项目，在相应servers中remove——clean——publish——start。</p>
-</blockquote>
-<h2 id="iview"><a href="#iview" class="headerlink" title="iview"></a>iview</h2><ol>
-<li><date-picker>日期选择器。</date-picker></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>取值范围</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>placement</td>
-<td>top top-start top-end bottom bottom-start bottom-end left left-start left-end right right-start right-end</td>
-<td>若组件上方/下方空白区域不足，日历选择器的位置将自动适应。需要提前调整组件位置</td>
-</tr>
-</tbody>
-</table>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ol>
-<li>父级元素设置opacity:0.5，会影响子元素。子元素opacity:1，即在父元素0.5的基础上设置，子元素透明度仍为0.5。故父级元素使用rbga(255,255,255,0.5)设置透明度。</li>
-</ol>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生成对抗网络（GAN）、CNN、时间循环神经网络、分词</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://pngiu.tech/2019/11/16/H5+SSM的坑/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/11/19/快捷键/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          快捷键学习
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/09/27/小程序学习总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序学习总结</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -350,8 +222,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
