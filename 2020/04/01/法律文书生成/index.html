@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://pngiu.tech">
   <title>法律文书生成 | pngiu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="论文 基于改进生成对抗网络的法律文本生成模型 基于编码——解码框架的生成器G模型   ​     生成对抗网络GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。 GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。 ##GAN的优势## ：不需要设计专门的算法来评估生成的文本效果。 时间循环">
+  <meta name="description" content="论文 基于改进生成对抗网络的法律文本生成模型 基于编码——解码框架的生成器G模型   ​     生成对抗网络GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。 GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。 GAN的优势 ：不需要设计专门的算法来评估生成的文本效果。 时间循环神经网络">
 <meta name="keywords" content="生成对抗网络（GAN）、CNN、时间循环神经网络、分词">
 <meta property="og:type" content="article">
 <meta property="og:title" content="法律文书生成">
 <meta property="og:url" content="http://pngiu.tech/2020/04/01/法律文书生成/index.html">
 <meta property="og:site_name" content="pngiu">
-<meta property="og:description" content="论文 基于改进生成对抗网络的法律文本生成模型 基于编码——解码框架的生成器G模型   ​     生成对抗网络GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。 GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。 ##GAN的优势## ：不需要设计专门的算法来评估生成的文本效果。 时间循环">
+<meta property="og:description" content="论文 基于改进生成对抗网络的法律文本生成模型 基于编码——解码框架的生成器G模型   ​     生成对抗网络GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。 GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。 GAN的优势 ：不需要设计专门的算法来评估生成的文本效果。 时间循环神经网络">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="c:/Users/xunqi/AppData/Roaming/Typora/typora-user-images/image-20200401101732568.png">
-<meta property="og:updated_time" content="2020-04-01T02:25:18.773Z">
+<meta property="og:updated_time" content="2020-04-08T07:07:40.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="法律文书生成">
-<meta name="twitter:description" content="论文 基于改进生成对抗网络的法律文本生成模型 基于编码——解码框架的生成器G模型   ​     生成对抗网络GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。 GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。 ##GAN的优势## ：不需要设计专门的算法来评估生成的文本效果。 时间循环">
+<meta name="twitter:description" content="论文 基于改进生成对抗网络的法律文本生成模型 基于编码——解码框架的生成器G模型   ​     生成对抗网络GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。 GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。 GAN的优势 ：不需要设计专门的算法来评估生成的文本效果。 时间循环神经网络">
 <meta name="twitter:image" content="c:/Users/xunqi/AppData/Roaming/Typora/typora-user-images/image-20200401101732568.png">
   
     <link rel="alternative" href="/atom.xml" title="pngiu" type="application/atom+xml">
@@ -177,7 +177,7 @@
 <p>​    </p>
 <h2 id="生成对抗网络"><a href="#生成对抗网络" class="headerlink" title="生成对抗网络"></a>生成对抗网络</h2><p>GAN由生成器G和辨别器D构成，辨别器D是具有分类作用的函数，可采用机器学习的SVM算法/深度学习的分类算法。</p>
 <p>GAN的特点：不断训练辨别器D来提高鉴别真实数据和生成数据的能力，生成器G不断训练提高迷惑D的能力。</p>
-<p>##GAN的优势## ：不需要设计专门的算法来评估生成的文本效果。</p>
+<p>GAN的优势 ：不需要设计专门的算法来评估生成的文本效果。</p>
 <h2 id="时间循环神经网络"><a href="#时间循环神经网络" class="headerlink" title="时间循环神经网络"></a>时间循环神经网络</h2><blockquote>
 <p>RNN在长序列任务上易出现信息损失问题，LSTM 解决长序列依赖问题非常有效</p>
 </blockquote>
