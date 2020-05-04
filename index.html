@@ -608,7 +608,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.配置“tabBar”的list时，必须包含“pages/index/index”，否则无法显示tab。</p>
+        <h2 id="Component-properties"><a href="#Component-properties" class="headerlink" title="Component-properties"></a>Component-properties</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*    </span></span><br><span class="line"><span class="comment">myProperty:&#123; 	//属性名</span></span><br><span class="line"><span class="comment">	type: String,	// 目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型） </span></span><br><span class="line"><span class="comment">	value: '',	// 属性初始值（可选），如果未指定则会根据类型选择一个      </span></span><br><span class="line"><span class="comment">	observer: function(newVal, oldVal)&#123;&#125; 	// 属性被改变时执行的函数，也可以写成在methods段中定义的方法名字符串, 如：'_propertyChange'    </span></span><br><span class="line"><span class="comment">&#125;  </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>作者：mipaifu328<br>链接：<a href="https://www.jianshu.com/p/c90138314ec8" target="_blank" rel="noopener">https://www.jianshu.com/p/c90138314ec8</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>1.配置“tabBar”的list时，必须包含“pages/index/index”，否则无法显示tab。</p>
 <p>2.未对标签中某个属性赋值，则取true（无论default是否等于false）。</p>
 <p>3.在tomcat/conf目录下，修改server.xml配置SSL证书。小程序可以直接通过url，使用存储在云服务器中数据。其中，应修改80端口的redirectTo，重定向到配置SSL的443端口中（非8080端口）。</p>
 <p>4.this.data.array，可以通过push()函数为数组追加对象。需要注意的是，需要再次显式的设置array(this.setData({…}))，wxml才能成功获取数据。</p>
