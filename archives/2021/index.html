@@ -6,13 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://pngiu.tech">
-  <title>pngiu</title>
+  <title>Archives: 2021 | pngiu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="双非本科在读，总想提升自己，还在道路上迷茫。">
 <meta name="keywords" content="考研">
 <meta property="og:type" content="website">
 <meta property="og:title" content="pngiu">
-<meta property="og:url" content="http://pngiu.tech/page/2/index.html">
+<meta property="og:url" content="http://pngiu.tech/archives/2021/index.html">
 <meta property="og:site_name" content="pngiu">
 <meta property="og:description" content="双非本科在读，总想提升自己，还在道路上迷茫。">
 <meta property="og:locale" content="zh-CN">
@@ -142,754 +142,74 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Mybatis实验过程中遇到的问题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/01/27/数据库引擎区别/" class="archive-article-date">
+  	<time datetime="2021-01-27T10:47:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/07/Mybatis实验过程中遇到的问题汇总/">Mybatis实验过程中遇到的问题汇总</a>
+      <a class="archive-article-title" href="/2021/01/27/数据库引擎区别/">数据库引擎区别</a>
     </h1>
   
 
-        
-        <a href="/2019/05/07/Mybatis实验过程中遇到的问题汇总/" class="archive-article-date">
-  	<time datetime="2019-05-07T09:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>mysql连接</strong></p>
-<ul>
-<li><em>driver</em>：com.mysql.jdbc.Driver</li>
-</ul>
-<ul>
-<li><em>url</em>：jdbc:mysql://localhost:post/database<br><strong>sql server连接</strong></li>
-<li><em>driver</em>：com.microsoft.sqlserver.jdbc.SQLServerDriver</li>
-<li><em>url</em>：jdbc:sqlserver://ip:post;DatabaseName=database</li>
-</ul>
-<ol>
-<li><p>调用Resource.getResourceAsReader(String str)方法，——没有导入mybatis相关的包；——没有考虑处理IOException异常</p>
-</li>
-<li><p>sqlSessionFactory=new SqlSessionFactoryBuilder().builder(Reader reader) &gt;&gt;——&gt;&gt;sqlSession = sqlSessionFactory.openSession();</p>
-</li>
-<li><p>sqlSession.close();</p>
-</li>
-<li><p>在执行insert，update，delete操作时，注意使用sqlSession.commit()提交事务。否则控制台显示成功执行，但数据库中并无更新数据</p>
-</li>
-<li><p>执行update操作时，可以创建一个新pojo，只对需要的属性进行setter。</p>
-</li>
-<li><p>在使用mybatis注解对数据库进行查询时，如果表中字段和pojo属性名称不一致，则会出现返回数据的个数正确，但内容均为null。解决办法：列名a_id,属性名id&gt;&gt;–&gt;&gt;@Select(“select a_id as id from animal”)</p>
-</li>
-<li><p>Error setting driver on UnpooledDataSource.Cause can’t find class:com.mysql.jdbc.Driver————①字母拼写错误、②没有导入jar包</p>
-</li>
-</ol>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/07/Mybatis实验过程中遇到的问题汇总/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-Spring第二次巩固" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
     
-      <header class="article-header">
-        
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/01/27/Spring-Boot/" class="archive-article-date">
+  	<time datetime="2021-01-27T07:59:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/24/Spring第二次巩固/">Spring第二次巩固</a>
+      <a class="archive-article-title" href="/2021/01/27/Spring-Boot/">Spring Boot</a>
     </h1>
   
 
-        
-        <a href="/2019/04/24/Spring第二次巩固/" class="archive-article-date">
-  	<time datetime="2019-04-24T10:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第一次接触Spring的时候，对里面的配置文件，jar包都不熟悉。随着一段时间的学习，通读了一遍书上的代码，目前对如何使用已经有了一些头绪，但也并不是很清晰。对Spring第二次的巩固学习，是想拾起之前通读过的代码，加深理解，并依靠自己学习到的知识，先实现书中简单的示例。</p>
-<h2 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h2><p>Spring的AOP是一种面向切面的编程方式，也就是将事务、日志、权限、异常等操作处理功能集合到一个Aspect类中，再将其织入原有代码。AOP的代理是AOP框架生成的一个动态对象，代理的对象可作为增强后的目标对象实现其功能和记录日志等功能。</p>
-<h4 id="Spring的两种动态代理"><a href="#Spring的两种动态代理" class="headerlink" title="Spring的两种动态代理"></a>Spring的两种动态代理</h4><blockquote>
-<p>1.JDK动态代理<br>  2.CGLIB代理</p>
-</blockquote>
-<p>1：在目标类实现业务接口时，Spring会默认调用1。1的实现需要业务接口、实现业务接口的类、包含通知的切面类、实现JDK动态代理的类。</p>
-<ul>
-<li>设计一个JDK动态代理类，需要用到反射的技术，该类需要实现java.lang.reflect.InvocationHandler接口，及其中的invoke方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//声明目标接口</span><br><span class="line">private UserDao userDao;</span><br><span class="line">//创建代理对象</span><br><span class="line">   public Object createProxy(UserDao userDao)</span><br><span class="line">   &#123;</span><br><span class="line">       this.userDao = userDao;</span><br><span class="line">       ClassLoader classLoader = JdkProxy.class.getClassLoader();</span><br><span class="line">       Class[] cl = userDao.getClass().getInterfaces();</span><br><span class="line"> //返回被代理的对象proxy</span><br><span class="line">       return Proxy.newProxyInstance(classLoader,cl,this);</span><br><span class="line">   &#125;</span><br><span class="line">//InvocationHandler接口的invoke方法，当代理对象执行目标方法时，会被拦截，并织入通知</span><br><span class="line">   public Object invoke(Object proxy,Method method,Object[] args)throws Throwable&#123;</span><br><span class="line">       MyAspect myAspect = new MyAspect();</span><br><span class="line">       myAspect.before();</span><br><span class="line">       Object obj = method.invoke(userDao,args);</span><br><span class="line">       myAspect.after();</span><br><span class="line">       return obj;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>2：对没有实现接口的目标类，使用CGLIB代理方法。2的实现需要目标类、包含通知的切面类、实现CGLIB代理的类。</p>
-<ul>
-<li>设计一个实现CGLIB代理的类，需要实现org.springframework.cglib.proxy.MethodInterceptor接口，及其中的intercept方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//创建代理对象，enhancer为动态代理对象，将目标对象target的类作为其父类，enhancer将继承target的类中所实现的所有方法</span><br><span class="line">   public Object createProxy(Object target)&#123;</span><br><span class="line">       Enhancer enhancer = new Enhancer();</span><br><span class="line">       enhancer.setSuperclass(target.getClass());</span><br><span class="line">       enhancer.setCallback(this);</span><br><span class="line">       return enhancer.create();</span><br><span class="line">   &#125;</span><br><span class="line">//实现MethodInterceptor接口中的intercept方法，当代理对象执行目标方法时，被拦截，并植入通知。</span><br><span class="line">   public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable&#123;</span><br><span class="line">       MyAspect myAspect =  new MyAspect();</span><br><span class="line">       myAspect.before();</span><br><span class="line">       Object obj = methodProxy.invokeSuper(proxy,args);</span><br><span class="line">       myAspect.after();</span><br><span class="line">       return obj;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>以上是AOP代理实现的两种方式。</p>
-<h4 id="ProxyBeanFactory——最基本的AOP实现方式"><a href="#ProxyBeanFactory——最基本的AOP实现方式" class="headerlink" title="ProxyBeanFactory——最基本的AOP实现方式"></a>ProxyBeanFactory——最基本的AOP实现方式</h4><blockquote>
-<p>org.springframework.aop.framework.ProxyBeanFactory该类的存在，是为其他bean创建代理对象。</p>
-</blockquote>
-<p>该方式的实现主要需要，设计一个实现org.aopaliiance.intercept.MethodInterceptor接口的切面类，配置applicationContext.xml文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//切面类实现接口的invoke方法，在代理对象实现方法时拦截，并植入通知。</span><br><span class="line">   @Override</span><br><span class="line">   public Object invoke(MethodInvocation methodInvocation) throws Throwable &#123;</span><br><span class="line"></span><br><span class="line">       before();</span><br><span class="line">       Object obj = methodInvocation.proceed();</span><br><span class="line">       after();</span><br><span class="line">       return obj;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">//applicationContext.xml的配置。</span><br><span class="line">&lt;bean id=&quot;userDao&quot; class=&quot;study.web.proxyBeanFactory.UserDaoImpl&quot;   /&gt;</span><br><span class="line">   &lt;bean id=&quot;myAspect&quot; class=&quot;study.web.proxyBeanFactory.MyAspect&quot; /&gt;</span><br><span class="line">//配置代理工厂需要用到AOP中的ProxyFactoryBean类，配置其属性：依次是指定代理类实现的接口、指定目标对象、指定植入通知的切面、指定使用cglib代理</span><br><span class="line">   &lt;bean id=&quot;proxyBeanFactory&quot; class=&quot;org.springframework.aop.framework.ProxyFactoryBean&quot;&gt;</span><br><span class="line">       &lt;property name=&quot;proxyInterfaces&quot; value=&quot;study.web.proxyBeanFactory.UserDao&quot; /&gt;</span><br><span class="line">       &lt;property name=&quot;target&quot; ref=&quot;userDao&quot;   /&gt;</span><br><span class="line">       &lt;property name=&quot;interceptorNames&quot; value=&quot;myAspect&quot;  /&gt;</span><br><span class="line">       &lt;property name=&quot;proxyTargetClass&quot; value=&quot;true&quot;  /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
-<h4 id="AspectJ"><a href="#AspectJ" class="headerlink" title="AspectJ"></a>AspectJ</h4><blockquote>
-<p>1.xml 2.annotation</p>
-</blockquote>
-<p>1：设计Aspect类，实现多个通知方法，在.xml文件中<a href="aop:config" target="_blank" rel="noopener">aop:config</a>中配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;userDao&quot; class=&quot;study.web.aspectj.xml.UserDao&quot;    /&gt;</span><br><span class="line">   &lt;bean id=&quot;myAspect&quot; class=&quot;study.web.aspectj.xml.MyAspect&quot;  /&gt;</span><br><span class="line">   &lt;aop:config&gt;</span><br><span class="line">       &lt;aop:aspect ref=&quot;myAspect&quot;&gt;</span><br><span class="line">           &lt;aop:pointcut id=&quot;myPointcut&quot; expression=&quot;execution(* study.web.aspectj.xml.*.*(..))&quot;   /&gt;</span><br><span class="line">           &lt;aop:before method=&quot;myBefore&quot; pointcut-ref=&quot;myPointcut&quot; /&gt;</span><br><span class="line">           &lt;aop:after-returning method=&quot;myAfterReturning&quot; pointcut-ref=&quot;myPointcut&quot; returning=&quot;retVal&quot;/&gt;</span><br><span class="line">           &lt;aop:around method=&quot;myAround&quot; pointcut-ref=&quot;myPointcut&quot; /&gt;</span><br><span class="line">           &lt;aop:after-throwing method=&quot;myAfterThrowing&quot; pointcut-ref=&quot;myPointcut&quot; throwing=&quot;throwable&quot;    /&gt;</span><br><span class="line">           &lt;aop:after method=&quot;myAfter&quot; pointcut-ref=&quot;myPointcut&quot;   /&gt;</span><br><span class="line">       &lt;/aop:aspect&gt;</span><br><span class="line">   &lt;/aop:config&gt;</span><br></pre></td></tr></table></figure></p>
-<p>2：为目标类添加@Repository,为切面类添加@Aspect，@Component等注解，在.xml配置文件中，使用<a href="context:component-scan" target="_blank" rel="noopener">context:component-scan</a>标签扫描注解，并启用AspectJ支持<a href="aop:aspectj-autoproxy" target="_blank" rel="noopener">aop:aspectj-autoproxy</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//关键注解</span><br><span class="line">@Pointcut(&quot;execution(* study.web.aspectj.annotation.*.*(..))&quot;)</span><br><span class="line">@Before(&quot;myPointcut()&quot;)</span><br><span class="line">@AfterReturning(value = &quot;myPointcut()&quot;,returning = &quot;...&quot;)</span><br><span class="line">@Around(&quot;myPointcut()&quot;)	 </span><br><span class="line">@AfterThrowing(value=&quot;myPointcut()&quot;,throwing=&quot;throwable&quot;)</span><br><span class="line">@After(&quot;myPointcut()&quot;)</span><br></pre></td></tr></table></figure></p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/24/Spring第二次巩固/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-Mybatis学习总结（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/08/Mybatis学习总结（二）/">Mybatis学习总结（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/08/Mybatis学习总结（二）/" class="archive-article-date">
-  	<time datetime="2019-04-08T13:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="动态配置SQL"><a href="#动态配置SQL" class="headerlink" title="动态配置SQL"></a>动态配置SQL</h2><ul>
-<li><p>&lt;if></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=&quot;methodName&quot; parameterType=&quot;...&quot; resultType=&quot;...&quot;&gt;</span><br><span class="line"> SELECT * FROM tableName WHERE 1=1</span><br><span class="line"> &lt;if test=&quot;username!=null&quot;&gt;</span><br><span class="line">   AND ...</span><br><span class="line"> &lt;/if&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line"></span><br><span class="line">//返回SQl语句执行结果</span><br><span class="line">List&lt;T&gt; t = session.selectList(&quot;package.xxxMapper.methodName&quot;,parameter);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>&lt;choose>、&lt;when>、&lt;otherwise><br>使用方法与switch、case、default相同</p>
-</li>
-<li><p>&lt;where>、&lt;trim><br>自动连接SQL语句，两者效果相同。</p>
-</li>
-<li><p>&lt;set><br>使用于update语句中</p>
-</li>
-<li><p>&lt;foreach><br>为SQL传入的集合遍历。<br>1.item：配置的是循环中当前的元素(id);<br>2.index：配置当前元素在集合的位置下表；<br>3.collection：配置的list是传递过来的参数类型。</p>
-</li>
-<li><p>&lt;bind></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;select&gt;</span><br><span class="line"> &lt;bind name=&quot;pattern_username&quot; value=&quot;&apos;%&apos;+_parameter.getUsername()+&apos;%&apos;&quot; /&gt;</span><br><span class="line"> SELECT...</span><br><span class="line"> WHERE</span><br><span class="line"> username like #&#123;pattern_username&#125;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Mybatis关联映射"><a href="#Mybatis关联映射" class="headerlink" title="Mybatis关联映射"></a>Mybatis关联映射</h2><p>一对一、一对多、多对多。</p>
-<blockquote>
-<p>一对一<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;resultMap ...&gt;</span><br><span class="line"> ...</span><br><span class="line"> //嵌套查询</span><br><span class="line"> &lt;association property=&quot;field_java&quot; javaType=&quot;field_sql&quot; </span><br><span class="line">  select=&quot;package.XXXMapper.selectID&quot; /&gt;</span><br><span class="line"> //嵌套结果</span><br><span class="line"> &lt;association property=&quot;field2_java&quot; javaType=&quot;field2_sql&quot;&gt;</span><br><span class="line">  &lt;id property=&quot;id&quot; column=&quot;sql_id&quot; /&gt;</span><br><span class="line"> &lt;/association&gt;</span><br><span class="line">&lt;/resultMap&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>一对多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Class User&#123;</span><br><span class="line"> private List&lt;Orders&gt; ordersList;&#125;</span><br><span class="line">&lt;collection property=&quot;ordersList属性名&quot; ofType=&quot;Orders类名&quot;&gt;</span><br><span class="line"> &lt;id property=&quot;id&quot; column=&quot;orders_id&quot; /&gt;</span><br><span class="line"> ...</span><br><span class="line">&lt;/collection&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-</blockquote>
-<p>多对多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Class Product&#123;</span><br><span class="line"> private List&lt;Orders&gt; orders;&#125;</span><br><span class="line">&lt;collection property=&quot;productList&quot; column=&quot;id&quot; ofType=&quot;Product&quot;</span><br><span class="line"> select=&quot;package.XXXMapper.methodName&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Spring-Mybatis"><a href="#Spring-Mybatis" class="headerlink" title="Spring+Mybatis"></a>Spring+Mybatis</h2><p>1.在applicationContext.xml中，配置dataSource，transactionManager，tx，<strong>配置Mybatis工厂</strong>(指定mybatis-config.xml)位置；<br>2.配置mybatis-config.xml；<br>3.<br>(1)基于DAO方式开发：创建持久化对象，实现数据访问的接口和类，实例化DAO（注入SqlSessionFactory）；<br>(2)Mapper接口方式开发：定义Mapper接口即要实现的方法，XXMapper.xml文件编写SQL语句(id和方法名相同)，在mybatis-config.xml中添加映射文件，配置bean(基于MapperFactoryBean)并注入mapperInterface、sqlSessionFactory。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/08/Mybatis学习总结（二）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mybatis学习总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/07/Mybatis学习总结/">Mybatis学习总结（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/07/Mybatis学习总结/" class="archive-article-date">
-  	<time datetime="2019-04-07T12:31:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Myabtis框架是一种ORM（对象关系映射）框架，描述Java对象与数据库某表之间的映射关系，自动将Java中的对象，<strong>持久化</strong>到关系型数据库的表中。</p>
-<p>Q：Hibernate与Myabtis区别？</p>
-<p>A1：Hibernate是全表映射的框架，只需定义好持久化对象到关系型数据库的表中的映射关系，就可以直接完成持久层操作；不需熟练掌握SQL语句；开发效率高于Myabtis；只适合在场景不太复杂或性能要求不高的项目使用。<br>A2：Mybatis是半自动映射的框架，需手动配置POJO、SQL、映射关系；工作量大；可配置动态SQL并优化；支持存储过程。</p>
-<h4 id="Mybatis工作原理"><a href="#Mybatis工作原理" class="headerlink" title="Mybatis工作原理"></a>Mybatis工作原理</h4><p>1.读配置文件mybatis-config.xml；<br>2.加载映射文件XXXmapper.xml;<br>3.sqlSessionFactory–&gt;sqlSession;<br>4.Executor;<br>5.(4)返回MappedStatement对象。</p>
-<h2 id="配置log4j-properties"><a href="#配置log4j-properties" class="headerlink" title="配置log4j.properties"></a>配置log4j.properties</h2><p>log4j输出日志信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Global logging configuration	//全局日志配置</span><br><span class="line">log4j.rootLogger=ERROR, stdout </span><br><span class="line"># MyBatis logging configuration... 	//Mybatis日志配置</span><br><span class="line">log4j.logger.com.itheima=DEBUG</span><br><span class="line"># Console output... 	//控制台输出</span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender </span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout </span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n</span><br></pre></td></tr></table></figure></p>
-<h2 id="定制持久化类"><a href="#定制持久化类" class="headerlink" title="定制持久化类"></a>定制持久化类</h2><p>如Customer类，定义属性（id,username,phone）、方法（getter,setter）。</p>
-<h2 id="核心配置文件mybatis-config-xml"><a href="#核心配置文件mybatis-config-xml" class="headerlink" title="核心配置文件mybatis-config.xml"></a>核心配置文件mybatis-config.xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//工具类</span><br><span class="line">public class MybatisUtils&#123;</span><br><span class="line"> private static SqlSessionFactory sqlSessionFactory=null;</span><br><span class="line"> static&#123;</span><br><span class="line">  try&#123;</span><br><span class="line">   Reader reader = Resources.getResourceAsReader(&quot;mybatis-config.xml&quot;);</span><br><span class="line">   sqlSessionFactory = new SqlSessionFactoryBuilder.build(reader);</span><br><span class="line">  &#125;</span><br><span class="line">  catch(Exception e)</span><br><span class="line">  &#123; e.printStackTrace(); &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> public static SqlSession getSession()&#123;</span><br><span class="line">  return sqlSessionFactory.openSession();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>SqlSessionFactory是线程安全的，若多次创建同一个数据库的SqlSessionFactory，则数据库资源将被耗尽。</li>
-<li>及时使用sqlSession.close()</li>
-</ul>
-<ol>
-<li><strong>properties</strong>：读取外部xx.properties文件；</li>
-<li>settings：用于改变Mybatis运行时的行为，如缓存全局开关、延迟加载的全局开关…；</li>
-<li>typeAliases：为Java类起别名，package name=”package[.class]”；</li>
-<li>typeHandler：javaType←—–→jdbcType；</li>
-<li>objectFactory：实例化目标类；</li>
-<li>plugins：配置用户所开发的插件；</li>
-<li>environments：子元素environment，配置dataSource、transactionManager；<ul>
-<li>UNPOOLED：每次被请求时会打开和关闭连接。</li>
-<li>POOLED：避免了在创建新的连接实例时所需的初始化和认证时间，使并发Web应用可以快速的响应请求；</li>
-<li>JNDI：容器可集中在外部配置数据源。<br>8.mappers：指定映射文件的位置。</li>
-</ul>
-</li>
-</ol>
-<h2 id="映射文件"><a href="#映射文件" class="headerlink" title="映射文件"></a>映射文件</h2><p>XXXCustomerMapper.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;mapper namespace=&quot;package&quot;&gt;</span><br><span class="line"> &lt;select id=&quot;...&quot; parameterType=&quot;...&quot; resultType=&quot;...&quot;&gt;</span><br><span class="line">  SQL语句;</span><br><span class="line"> &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br><span class="line"></span><br><span class="line">// #&#123;&#125;表示占位符，括号内是待接受参数名</span><br><span class="line">// $&#123;&#125;表示原样输出</span><br></pre></td></tr></table></figure></p>
-<h4 id="select"><a href="#select" class="headerlink" title="select"></a>select</h4><ul>
-<li>id：唯一标识符；</li>
-<li>parameterType：传入SQL语句的参数类型；</li>
-<li>resultType：从SQL语句中返回的返回类型；</li>
-<li>resultMap：用于持久化对象和数据库属性关联，多表关联；</li>
-</ul>
-<h4 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h4><ul>
-<li>keyProperty：将SQL语句的返回值给PO类的某个属性，通常设置为主键对应属性；</li>
-<li>keyColun：用于设置第几列是主键；</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/07/Mybatis学习总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-一些杂谈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/07/一些杂谈/">一些杂谈</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/07/一些杂谈/" class="archive-article-date">
-  	<time datetime="2019-04-07T12:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>离上次更新blog的时间已经过去一周半，这段时间里整天忙于应付学校安排很紧凑的课程。</p>
-<p>自我学习方面，对黑盒测试的几种方法简单梳理了下，下周会抽空放到博客上面。目前有在自学Web前端的东西，算是把html基础看完了，下周计划解决掉css的部分。英语一直是我的软肋，制定的背单词计划因为有两天没有复习，也就此中断，现在打算换一种学习方法，目前在手机上下载了几个英文新闻app，尝试从阅读入手，提高词汇量。</p>
-<p>清明节的三天假期过得很快，每天都在外面玩，但好像也没那么开心。整个人有些颓呀，希望自己能赶快振作起来，直到五一四天小长假前，能够为了达到自己的期望，好好努力一把。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/07/一些杂谈/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring基础知识学习总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/24/Spring基础知识学习总结/">Spring基础知识学习总结</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/24/Spring基础知识学习总结/" class="archive-article-date">
-  	<time datetime="2019-03-24T12:53:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Spring的基本介绍"><a href="#Spring的基本介绍" class="headerlink" title="Spring的基本介绍"></a>Spring的基本介绍</h2><p>Spring是JavaEE轻量级框架，以IoC(DI)和AOP为内核。使用基本的JavaBean(即POJO)完成工作。</p>
-<p>两个核心容器：BeanFactory、ApplicationContext。<br>ApplicationContext继承BeanFactory，实现对Bean的初始化、管理、调用其生命周期内的方法。在此基础上，ApplicationContext类增加了在初始化Bean时对其属性的自检功能。</p>
-<blockquote>
-<p>加载配置文件、getBean<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlClassPath);</span><br><span class="line">Bean bean = applicationContext.getBean(&quot;bean1&quot;);</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>依赖注入实例(DI)：</p>
-<blockquote>
-<p>使用setter方法注入属性、使用构造方法注入属性。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;userDao&quot; class=&quot;user.UserDao&quot; /&gt;</span><br><span class="line">&lt;bean id=&quot;userService&quot; class=&quot;user.UserService&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;userDao&quot; ref=&quot;userDao&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class UserServiceImpl implements UserService&#123;</span><br><span class="line"> private UserDao usrDao;</span><br><span class="line"> public void setUserDao(UserDao userDao)&#123;</span><br><span class="line">  this.userDao = userDao;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Bean的配置。"><a href="#Bean的配置。" class="headerlink" title="Bean的配置。"></a>Bean的配置。</h2><ol>
-<li>id：bean的唯一标识符；</li>
-<li>name：为bean指定多个名称（Spring可通过id、name对Bean配置管理）；</li>
-<li>class：指定bean实现的类；</li>
-<li>scope：指定bean的作用域；</li>
-<li>property：bean的子元素，可使用该元素将参数通过setter方法注入bean的属性；</li>
-<li>construtor-arg：bean的子元素，可使用该元素将参数通过构造方法注入bean的属性；</li>
-<li>ref：6、7的子元素，对bean实例的引用；</li>
-<li>value：6、7的子元素，指定常量；</li>
-<li>list、set、map：封装三种集合的注入；</li>
-<li>entry：map子元素，设置键值对。</li>
-</ol>
-<h2 id="Bean三种实例化方法。"><a href="#Bean三种实例化方法。" class="headerlink" title="Bean三种实例化方法。"></a>Bean三种实例化方法。</h2><p>构造方法实例化、静态工厂实例化、实例工厂实例化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public class Bean1&#123;&#125;</span><br><span class="line">&lt;bean id=&quot;bean1&quot; class=&quot;package.Bean1&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Bean2&#123;&#125;</span><br><span class="line"></span><br><span class="line">public class Bean2Factory&#123;</span><br><span class="line"> public static Bean2 createBean()&#123;</span><br><span class="line">  return new Bean2();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;bean2&quot; class=&quot;package.Bean2Factory&quot; factory-method=&quot;createBean&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Bean3&#123;&#125;</span><br><span class="line"></span><br><span class="line">public class Bean3Factory&#123;</span><br><span class="line"> public Bean3 createBean()&#123;</span><br><span class="line">  return new Bean3();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;bean3&quot; factory-bean=&quot;Bean3Factory&quot; factory-method=&quot;createBean&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Bean的作用域"><a href="#Bean的作用域" class="headerlink" title="Bean的作用域"></a>Bean的作用域</h2><ul>
-<li>！single(默认)：每次从Spring容器中取出的Bean都是对同一个实例的引用。</li>
-<li>！prototype：每次从Spring容器中获取新的Bean实例。</li>
-<li>request：对HTTP请求，每次产生一个新的Bean，仅在当前HTTP request有效。</li>
-<li>session、globalSession：与request相似。</li>
-<li>application：为每个ServletContext对象创建一个实例，尽在Web相关的ApplicationContext中生效。</li>
-<li>websocket：为每个websocket对象创建一个实例，生效情况同application。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;user&quot; class=&quot;package.User&quot; scope=&quot;prototype&quot; /&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Bean的生命周期"><a href="#Bean的生命周期" class="headerlink" title="Bean的生命周期"></a>Bean的生命周期</h2><p>实例化–&gt;设置属性值–&gt;调用Bean实现的一些接口的方法–&gt;作用域决定Bean的管理者–&gt;Bean的销毁</p>
-<h2 id="Bean的装配"><a href="#Bean的装配" class="headerlink" title="Bean的装配"></a>Bean的装配</h2><ul>
-<li>基于XML</li>
-<li>基于Annotation</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;bean1&quot; class=&quot;package.Bean1&quot;&gt;</span><br><span class="line"> &lt;constructor-arg index=&quot;0&quot; value=&quot;tom&quot; /&gt;</span><br><span class="line"> &lt;constructor-arg index=&quot;1&quot; value=&quot;19&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;bean2&quot; class=&quot;package.Bean2&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;username&quot; value=&quot;张三&quot; /&gt;</span><br><span class="line"> &lt;property name=&quot;age&quot; value=&quot;20&quot; /&gt;</span><br><span class="line"> &lt;proeprty name=&quot;list&quot;&gt;</span><br><span class="line">  &lt;list&gt;</span><br><span class="line">   &lt;value&gt;&quot;setListValue1&quot;&lt;/value&gt;</span><br><span class="line">   &lt;value&gt;&quot;setListValue2&quot;&lt;/value&gt;</span><br><span class="line">  &lt;/list&gt;</span><br><span class="line"> &lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Bean:@Component、@Repository、@Service、@Controller<br>默认类型装配：@Autowired，+ @Qualifier修改为按实例名称装配<br>实例名称装配：@Resource<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Repository(&quot;userDao&quot;)</span><br><span class="line">public class UserDaoImpl implements UserDao&#123;...&#125;</span><br><span class="line"></span><br><span class="line">@Service(&quot;userService&quot;)</span><br><span class="line">public class UserServiceImpl implements UserService&#123;...&#125;</span><br><span class="line"></span><br><span class="line">@Controller(&quot;userController&quot;)</span><br><span class="line">public class UserController&#123;</span><br><span class="line"> @Resource(name=&quot;userService&quot;)</span><br><span class="line"> private UserService userService;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 使用context命名空间，通知Spring扫描该包下所有类，解析注解 --&gt;</span><br><span class="line">&lt;context:component-scan base-package=&quot;package&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 使用autowired属性自动装配 --&gt;</span><br><span class="line">&lt;bean id=&quot;bean&quot; class=&quot;package.Bean&quot; autowire=&quot;byName&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="AOP相关"><a href="#AOP相关" class="headerlink" title="AOP相关"></a>AOP相关</h2><p>AOP即面向切面编程，是OOP的一种补充，实现对事务、日志、权限、异常等业务逻辑的独立管理，使开发人员编写业务逻辑时专心于核心业务。</p>
-<ul>
-<li>Aspect：切面，封装横向功能。</li>
-<li>JoinPoint：程序执行过程中的某个阶段点，是对象的一个操作(方法调用or异常抛出)。</li>
-<li>PointCut：需要处理的连接点，一般指类或方法名。</li>
-<li>Advice：在某切入点要执行的增强处理，即切面的具体实现。</li>
-<li>Target Object：被增强对象。</li>
-<li>Proxy：将通知应用到目标对象后被动态创建的对象。</li>
-<li>Weaving：将切面代码插入到目标对象上，从而生成代理对象的过程。</li>
-</ul>
-<h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><p>1.JDK动态代理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//定义UserDao接口和UserDaoImpl目标类实现接口方法</span><br><span class="line">//定义切面类实现多个Advice</span><br><span class="line"></span><br><span class="line">//创建JDK代理类</span><br><span class="line">public class jdkProxy implements InvocationHandler&#123;</span><br><span class="line"> private UserDao userDao;</span><br><span class="line"> public Object createProxy(UserDao userDao)&#123;</span><br><span class="line">  this.userDao = userDao;</span><br><span class="line">  ClassLoader classLoader = JdkProxy.class.getClassLoader();</span><br><span class="line">  Class[] clazz = userDao.getClass().getInterface();</span><br><span class="line">  return Proxy.newProxyInstance(classLoader,clazz,this);</span><br><span class="line"> &#125;</span><br><span class="line"> @Override</span><br><span class="line"> public Object invoke(Object proxy,Method method,Object[] args) throws Throwable&#123;</span><br><span class="line">  MyAspect myAspect = new MyAspect();</span><br><span class="line">  Object obj = method.invoke(userDao.args);</span><br><span class="line">  myAspect.advice();</span><br><span class="line">  return obj;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2.CGLIB代理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//定义目标类，添加操作方法</span><br><span class="line"></span><br><span class="line">//创建CGLIB代理类</span><br><span class="line">public class CglibProxy implements MethodInterceptor&#123;</span><br><span class="line"> public Object createProxy(Object target)&#123;</span><br><span class="line">  Enhancer enhancer = new Enhancer();</span><br><span class="line">  enhancer.setSuperclass(target.getclass());</span><br><span class="line">  enhancer.setCallback(this);</span><br><span class="line">  return enhancer.create();</span><br><span class="line"> &#125;</span><br><span class="line"> @Override</span><br><span class="line"> public Object intercept(Object proxy,Method method,Object[] args,MethodProxy methodProxy) throws Throwable&#123;</span><br><span class="line">  MyAspect myAspect = new MyAspect();</span><br><span class="line">  Object obj = methodProxy.invokeSuper(proxy,args);</span><br><span class="line">  myAspect.advice();</span><br><span class="line">  return obj;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>3.基于代理类的AOP实现</p>
-<blockquote>
-</blockquote>
-<ul>
-<li>环绕通知：org.aopalliance.intercept.MethodInterceptor</li>
-<li>前置通知：org.springframework.aop.MethodBeforeAdvice</li>
-<li>后置通知：方法执行成功后指定该通知，org.springframework.aop.AfterReturningAdvice</li>
-<li>最终通知：无论方法是否执行成功都执行该通知。</li>
-<li>异常通知：org.springframework.aop.AfterReturningAdvice</li>
-<li>引介通知：org.springframework.aop.IntroductionInterceptor</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//使用ProxyFactoryBean创建AOP代理</span><br><span class="line">public class MyAspect implements MethodInterceptor&#123;</span><br><span class="line"> @Override</span><br><span class="line"> public Object invoke(MethodInvocation mi) throw Throwable&#123;</span><br><span class="line">  advice1();</span><br><span class="line">  Object obj = mi.proceed();</span><br><span class="line">  advice2();</span><br><span class="line">  return obj;</span><br><span class="line"> &#125;</span><br><span class="line"> public void advice1&#123;...&#125;</span><br><span class="line"> public void advice2&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;userDaoProxy&quot; class=&quot;org.springframework.aop.framework.ProxyFactoryBean&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;proxyInterfaces&quot; value=&quot;package.UserDao&quot; /&gt;</span><br><span class="line"> &lt;property name=&quot;target&quot; ref=&quot;userDao&quot; /&gt;</span><br><span class="line"> &lt;property name=&quot;interceptorNames&quot; value=&quot;myAspect&quot; /&gt;</span><br><span class="line"> &lt;peoperty name=&quot;proxyTargetClass&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<p>4.AspectJ</p>
-<ul>
-<li>基于XML</li>
-<li>基于Annotation</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;aop:config&gt;</span><br><span class="line"> &lt;aop:aspect id=&quot;myaspect&quot; ref=&quot;myAspect&quot;&gt;</span><br><span class="line">  &lt;aop:pointuct expression=&quot;execution(* package.*.**(..))&quot; id=&quot;mypoint&quot; /&gt;</span><br><span class="line"></span><br><span class="line">  &lt;aop:before method=&quot;beforename&quot; pointcut-ref=&quot;mypoint&quot; /&gt;</span><br><span class="line">  ...</span><br><span class="line"> &lt;/aop:aspect&gt;</span><br><span class="line">&lt;/aop:config&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class myAspect&#123;</span><br><span class="line"> public void beforenae(JoinPoint joinPoint)&#123;...&#125;</span><br><span class="line"> //环绕</span><br><span class="line"> public Object myAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable&#123;</span><br><span class="line">  System.out.println(&quot;beginning环绕...&quot;);</span><br><span class="line">  Object obj = proceedingJoinPoint.proceed();</span><br><span class="line">  System.out.println(&quot;ending环绕...&quot;);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class MyAspect&#123;</span><br><span class="line"></span><br><span class="line"> @Pointcut(&quot;execution(* package.*.*(..))&quot;)</span><br><span class="line"> private void myPointCut()&#123;&#125;</span><br><span class="line"></span><br><span class="line"> @Before(&quot;myPointCut()&quot;)</span><br><span class="line"> public void myBefore(JoinPoint joinPoint)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:component-scan base-packing=&quot;package&quot; /&gt;</span><br><span class="line">&lt;aop:aspectj-autoproxy /&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Spring-JDBC"><a href="#Spring-JDBC" class="headerlink" title="Spring JDBC"></a>Spring JDBC</h2><p>Spring框架下提供了JdbcTemplate类，作为Spring JDBC的核心类。</p>
-<blockquote>
-<p>JDBC的配置</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- dataSource配置 --&gt;</span><br><span class="line">&lt;bean id=&quot;dataSource&quot; class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;driverClassName&quot; value=&quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot; /&gt;</span><br><span class="line"> &lt;property name=&quot;url&quot; value=&quot;jdbc:sqlserver://127.0.0.1:1433;DatabaseName=数据库名&quot; /&gt;</span><br><span class="line"> &lt;property name=&quot;username&quot; value=&quot;sa&quot; /&gt;</span><br><span class="line"> &lt;property name=&quot;password&quot; value=&quot;123456&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- JDBC模板配置 --&gt;</span><br><span class="line">&lt;bean id-&quot;jdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.jdbcTemplate&quot; &gt;</span><br><span class="line"> &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置注入类 --&gt;</span><br><span class="line">&lt;bean id=&quot;xxx&quot; class=&quot;xxx&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="JdbcTemplate的常用方法"><a href="#JdbcTemplate的常用方法" class="headerlink" title="JdbcTemplate的常用方法"></a>JdbcTemplate的常用方法</h4><ul>
-<li>@Test:对某方法进行单元测试，需要添加JUnit包</li>
-</ul>
-<p>1.execute()<br>执行SQL语句。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JdbcTemplate jdbcTemplate = (JdbcTemplate) applicationContext.getBean(&quot;jdbcTemplate&quot;);</span><br><span class="line">jdbcTemplate.execute(&quot;SQL语句&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>2.update()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class AccountDaoImpl implements AccountDao&#123;</span><br><span class="line"> int rows = this.jdbcTemplate.update(sql,obj);</span><br><span class="line"> //eg.sql = &quot;insert into account(username,balance) value(?,?)&quot;;</span><br><span class="line"> //eg.obj = new Object[]&#123;account.getter()&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 将jdbcTemplate注入accountDao中 --&gt;</span><br><span class="line">&lt;bean id=&quot;accountDao&quot; class=&quot;com.itheima.jdbc.AccountDaoImpl&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot;/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<p>3.query()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RowMapper&lt;Account&gt; rowMapper = new BeanPropertyRowMapper&lt;Account&gt;(Account.class);</span><br><span class="line">return this.jdbcTemplate.queryForObject(sql,rowMapper,id);</span><br><span class="line">OR</span><br><span class="line">return this.jdbcTemplate.query(sql,rowMapper);</span><br></pre></td></tr></table></figure></p>
-<h2 id="Spring-事务管理"><a href="#Spring-事务管理" class="headerlink" title="Spring 事务管理"></a>Spring 事务管理</h2><p>事务：访问数据库中数据项的一段代码单元。<br>四个特性(ACID)：原子性、一致性、隔离性、持久性。<br>——在对数据的更新、插入、删除等操作，必须进行事务管理，以防止数据信息记录出现错误。</p>
-<p>事务管理的三个核心接口：</p>
-<ul>
-<li>PlatfromTransactionManager：对事务状态的管理，拥有getTransaction、commit、rollback三个方法。</li>
-<li>TransactionDefinition：定义了事务的规则，描述相关信息(名称、隔离级别、传播行为(默认required)、超时时间、是否只读)。</li>
-</ul>
-<p>事务管理的方式：</p>
-<ul>
-<li>编程式事务管理</li>
-<li>声明式事务管理（基于AOP）</li>
-</ul>
-<blockquote>
-<p>基于XML的声明式事务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 在注入类后添加事务管理器、编写通知 --&gt;</span><br><span class="line">&lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.jdbc.dataSource.DataSourceTransactionManager&quot;&gt;</span><br><span class="line"> &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line"> &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</span><br><span class="line">  &lt;tx:attributes&gt;</span><br><span class="line">   &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; isolation=&quot;DEFAULT&quot; read-only=&quot;false&quot;/&gt;</span><br><span class="line">  &lt;/tx:attributes&gt;</span><br><span class="line"> &lt;/tx:advice&gt;</span><br><span class="line">&lt;!-- 编写aop，让spring自动对目标生成代理 --&gt;</span><br><span class="line">&lt;aop:config&gt;</span><br><span class="line"> &lt;aop:pointcut expression=&quot;execution(* com.itheima.jdbc.*.*(..))&quot; id=&quot;txPointCut&quot;/&gt;</span><br><span class="line"> &lt;aop:advisor advice-ref=&quot;txAdvice&quot; pointcut-ref=&quot;txPointCut&quot;/&gt;	</span><br><span class="line">&lt;/aop:config&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>基于Annotation的声明式事务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</span><br><span class="line">  &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line"> &lt;!-- 注册事务管理器驱动 --&gt;</span><br><span class="line"> &lt;tx:annotation-driven transaction-manager=&quot;transactionManager&quot;/&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/24/Spring基础知识学习总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-记录博客搭建和简单规划" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/17/记录博客搭建和简单规划/">记录博客搭建和简单规划</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/17/记录博客搭建和简单规划/" class="archive-article-date">
-  	<time datetime="2019-03-17T13:37:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="博客搭建过程"><a href="#博客搭建过程" class="headerlink" title="博客搭建过程"></a>博客搭建过程</h1><ul>
-<li>零零散散花了几个晚上的时间，把git和hexo都处理好，学会了如何使用git bash将本地仓库的java项目部署到github仓库内；设置了属于自己的域名。过程并不复杂，但是周期拖得也蛮长的（虽然这期间我还做了些其他小事情）。对自己的博客来讲，还有一点小问题：关于这个主题配置的时候，头像怎么也加载不出来，试过网上很多方法……暂时就让它保持这个小黑叉的状态吧。</li>
-<li>对于博客里要写些什么东西，我还暂时没有规划好。总的来说一定是关于学习的一些记录，同时也作为对自己自制力的一个监督。</li>
-<li>这一周过去，我的学习状态有些懒散。课程排的很多很紧，挤掉了一部分自学的时间，我又是一个享乐主义者（生活质量是一定保障的）……</li>
-<li>对下周的自己，主要先集中精力把JavaEE的基础知识刷完，单词的话，一个list都背不完就太丧了。<br><strong>在这里立下一周记录一次博客的flag</strong><br>就这样了~</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/17/记录博客搭建和简单规划/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-03-07T13:58:38.097Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/07/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 
 
           </div>
@@ -911,9 +231,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

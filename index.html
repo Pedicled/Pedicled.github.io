@@ -142,6 +142,155 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-数据库引擎区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/27/数据库引擎区别/">数据库引擎区别</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/27/数据库引擎区别/" class="archive-article-date">
+  	<time datetime="2021-01-27T10:47:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="InnoDB与MyISAM"><a href="#InnoDB与MyISAM" class="headerlink" title="InnoDB与MyISAM"></a>InnoDB与MyISAM</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/27/数据库引擎区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring-Boot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/27/Spring-Boot/">Spring Boot</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/27/Spring-Boot/" class="archive-article-date">
+  	<time datetime="2021-01-27T07:59:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><h2 id="‘pom-xml’文件中出现：inspection-‘Maven-Model-Inspection’-options"><a href="#‘pom-xml’文件中出现：inspection-‘Maven-Model-Inspection’-options" class="headerlink" title="‘pom.xml’文件中出现：inspection ‘Maven Model Inspection’ options"></a>‘pom.xml’文件中出现：inspection ‘Maven Model Inspection’ options</h2><p><strong>检查Maven配置</strong>：FIle–Settings–Build–Build Tools–Maven</p>
+<h2 id="Failed-to-execute-goal-org-apache-maven-plugins-maven-surefire-plugin-2-22-1-test-default-test-on-project-qc-offline-report-There-are-test-failures"><a href="#Failed-to-execute-goal-org-apache-maven-plugins-maven-surefire-plugin-2-22-1-test-default-test-on-project-qc-offline-report-There-are-test-failures" class="headerlink" title="Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project qc-offline-report: There are test failures."></a>Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project qc-offline-report: There are test failures.</h2><p><strong>更新pom.xml</strong>，加入如下内容。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.22.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="IDEA设置Maven自动加载pom-xml配置的依赖jar包"><a href="#IDEA设置Maven自动加载pom-xml配置的依赖jar包" class="headerlink" title="IDEA设置Maven自动加载pom.xml配置的依赖jar包"></a>IDEA设置Maven自动加载pom.xml配置的依赖jar包</h2><p>File -&gt; Setting -&gt;Maven -&gt;Importing：选中Automatically download中的两个多选框Sources和Documentation</p>
+<h2 id="Failed-to-execute-goal-org-apache-maven-plugins-maven-resources-plugin-3-2-0"><a href="#Failed-to-execute-goal-org-apache-maven-plugins-maven-resources-plugin-3-2-0" class="headerlink" title="Failed to execute goal org.apache.maven.plugins:maven-resources-plugin:3.2.0"></a>Failed to execute goal org.apache.maven.plugins:maven-resources-plugin:3.2.0</h2><p><strong>更新pom.xml</strong>，加入如下内容。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-resources-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">     	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">     		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">     			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.shared<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-filtering<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">     			<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">     	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Spring-Boot特点"><a href="#Spring-Boot特点" class="headerlink" title="Spring Boot特点"></a>Spring Boot特点</h1><ol>
+<li>用扁平化的配置，取代SSM框架中.xml文件的配置</li>
+</ol>
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p><strong>pom.xml</strong>——maven的配置文件（包含Spring Boot的配置项）</p>
+<ul>
+<li>每次修改完成后，需要点击Maven-Reimport</li>
+</ul>
+<p><strong>.gitignore</strong>——使用git管理项目时，用该文件排除不需要管理的文件。</p>
+<p><strong>main</strong>——源码目录（java目录存源码，resources目录存静态资源）</p>
+<p><strong>test</strong>——测试类目录</p>
+<p><strong>application.properties</strong>——程序配置、数据库连接配置、redis配置、全局变量</p>
+<h1 id="Maven配置"><a href="#Maven配置" class="headerlink" title="Maven配置"></a>Maven配置</h1><p><strong>配置目录</strong>：IntelliJ IDEA\plugins\maven\lib\maven3\conf\settings.xml</p>
+<p><strong>配置项</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>Maven仓库路径<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 阿里仓库，解决maven依赖下载过慢问题 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span>          </span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 绑定jdk1.8 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk-1.8<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p><strong>@SpringBootApplication</strong>——标识项目启动类</p>
+<p><strong>@RestController</strong>——@ResponseBody+@Controller</p>
+<p><strong>@RequestMapping</strong>——路由</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/27/Spring-Boot/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python入门学习记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -416,7 +565,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="pycharm"><a href="#pycharm" class="headerlink" title="pycharm"></a>pycharm</h2><ol>
+        <h2 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h2><ol>
+<li><p><strong>Ctrl + E</strong>：打开最近打开的文件列表</p>
+</li>
+<li><p><strong>Ctrl + Alt + L</strong>：格式化代码（需要屏蔽QQ热键）</p>
+</li>
+<li><p><strong>Alt + Enter</strong>：快速import</p>
+<p>此处可设置自动导入：Settings–Editor–General–Auto Import</p>
+</li>
+</ol>
+<h2 id="pycharm"><a href="#pycharm" class="headerlink" title="pycharm"></a>pycharm</h2><ol>
 <li>Ctrl + Shift + F10，快速配置并运行文件。</li>
 </ol>
 <h2 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h2><ol>
@@ -892,180 +1050,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/07/杂谈（二）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mybatis实验过程中遇到的问题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/07/Mybatis实验过程中遇到的问题汇总/">Mybatis实验过程中遇到的问题汇总</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/07/Mybatis实验过程中遇到的问题汇总/" class="archive-article-date">
-  	<time datetime="2019-05-07T09:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>mysql连接</strong></p>
-<ul>
-<li><em>driver</em>：com.mysql.jdbc.Driver</li>
-</ul>
-<ul>
-<li><em>url</em>：jdbc:mysql://localhost:post/database<br><strong>sql server连接</strong></li>
-<li><em>driver</em>：com.microsoft.sqlserver.jdbc.SQLServerDriver</li>
-<li><em>url</em>：jdbc:sqlserver://ip:post;DatabaseName=database</li>
-</ul>
-<ol>
-<li><p>调用Resource.getResourceAsReader(String str)方法，——没有导入mybatis相关的包；——没有考虑处理IOException异常</p>
-</li>
-<li><p>sqlSessionFactory=new SqlSessionFactoryBuilder().builder(Reader reader) &gt;&gt;——&gt;&gt;sqlSession = sqlSessionFactory.openSession();</p>
-</li>
-<li><p>sqlSession.close();</p>
-</li>
-<li><p>在执行insert，update，delete操作时，注意使用sqlSession.commit()提交事务。否则控制台显示成功执行，但数据库中并无更新数据</p>
-</li>
-<li><p>执行update操作时，可以创建一个新pojo，只对需要的属性进行setter。</p>
-</li>
-<li><p>在使用mybatis注解对数据库进行查询时，如果表中字段和pojo属性名称不一致，则会出现返回数据的个数正确，但内容均为null。解决办法：列名a_id,属性名id&gt;&gt;–&gt;&gt;@Select(“select a_id as id from animal”)</p>
-</li>
-<li><p>Error setting driver on UnpooledDataSource.Cause can’t find class:com.mysql.jdbc.Driver————①字母拼写错误、②没有导入jar包</p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/07/Mybatis实验过程中遇到的问题汇总/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring第二次巩固" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/24/Spring第二次巩固/">Spring第二次巩固</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/24/Spring第二次巩固/" class="archive-article-date">
-  	<time datetime="2019-04-24T10:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第一次接触Spring的时候，对里面的配置文件，jar包都不熟悉。随着一段时间的学习，通读了一遍书上的代码，目前对如何使用已经有了一些头绪，但也并不是很清晰。对Spring第二次的巩固学习，是想拾起之前通读过的代码，加深理解，并依靠自己学习到的知识，先实现书中简单的示例。</p>
-<h2 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h2><p>Spring的AOP是一种面向切面的编程方式，也就是将事务、日志、权限、异常等操作处理功能集合到一个Aspect类中，再将其织入原有代码。AOP的代理是AOP框架生成的一个动态对象，代理的对象可作为增强后的目标对象实现其功能和记录日志等功能。</p>
-<h4 id="Spring的两种动态代理"><a href="#Spring的两种动态代理" class="headerlink" title="Spring的两种动态代理"></a>Spring的两种动态代理</h4><blockquote>
-<p>1.JDK动态代理<br>  2.CGLIB代理</p>
-</blockquote>
-<p>1：在目标类实现业务接口时，Spring会默认调用1。1的实现需要业务接口、实现业务接口的类、包含通知的切面类、实现JDK动态代理的类。</p>
-<ul>
-<li>设计一个JDK动态代理类，需要用到反射的技术，该类需要实现java.lang.reflect.InvocationHandler接口，及其中的invoke方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//声明目标接口</span><br><span class="line">private UserDao userDao;</span><br><span class="line">//创建代理对象</span><br><span class="line">   public Object createProxy(UserDao userDao)</span><br><span class="line">   &#123;</span><br><span class="line">       this.userDao = userDao;</span><br><span class="line">       ClassLoader classLoader = JdkProxy.class.getClassLoader();</span><br><span class="line">       Class[] cl = userDao.getClass().getInterfaces();</span><br><span class="line"> //返回被代理的对象proxy</span><br><span class="line">       return Proxy.newProxyInstance(classLoader,cl,this);</span><br><span class="line">   &#125;</span><br><span class="line">//InvocationHandler接口的invoke方法，当代理对象执行目标方法时，会被拦截，并织入通知</span><br><span class="line">   public Object invoke(Object proxy,Method method,Object[] args)throws Throwable&#123;</span><br><span class="line">       MyAspect myAspect = new MyAspect();</span><br><span class="line">       myAspect.before();</span><br><span class="line">       Object obj = method.invoke(userDao,args);</span><br><span class="line">       myAspect.after();</span><br><span class="line">       return obj;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>2：对没有实现接口的目标类，使用CGLIB代理方法。2的实现需要目标类、包含通知的切面类、实现CGLIB代理的类。</p>
-<ul>
-<li>设计一个实现CGLIB代理的类，需要实现org.springframework.cglib.proxy.MethodInterceptor接口，及其中的intercept方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//创建代理对象，enhancer为动态代理对象，将目标对象target的类作为其父类，enhancer将继承target的类中所实现的所有方法</span><br><span class="line">   public Object createProxy(Object target)&#123;</span><br><span class="line">       Enhancer enhancer = new Enhancer();</span><br><span class="line">       enhancer.setSuperclass(target.getClass());</span><br><span class="line">       enhancer.setCallback(this);</span><br><span class="line">       return enhancer.create();</span><br><span class="line">   &#125;</span><br><span class="line">//实现MethodInterceptor接口中的intercept方法，当代理对象执行目标方法时，被拦截，并植入通知。</span><br><span class="line">   public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable&#123;</span><br><span class="line">       MyAspect myAspect =  new MyAspect();</span><br><span class="line">       myAspect.before();</span><br><span class="line">       Object obj = methodProxy.invokeSuper(proxy,args);</span><br><span class="line">       myAspect.after();</span><br><span class="line">       return obj;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>以上是AOP代理实现的两种方式。</p>
-<h4 id="ProxyBeanFactory——最基本的AOP实现方式"><a href="#ProxyBeanFactory——最基本的AOP实现方式" class="headerlink" title="ProxyBeanFactory——最基本的AOP实现方式"></a>ProxyBeanFactory——最基本的AOP实现方式</h4><blockquote>
-<p>org.springframework.aop.framework.ProxyBeanFactory该类的存在，是为其他bean创建代理对象。</p>
-</blockquote>
-<p>该方式的实现主要需要，设计一个实现org.aopaliiance.intercept.MethodInterceptor接口的切面类，配置applicationContext.xml文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//切面类实现接口的invoke方法，在代理对象实现方法时拦截，并植入通知。</span><br><span class="line">   @Override</span><br><span class="line">   public Object invoke(MethodInvocation methodInvocation) throws Throwable &#123;</span><br><span class="line"></span><br><span class="line">       before();</span><br><span class="line">       Object obj = methodInvocation.proceed();</span><br><span class="line">       after();</span><br><span class="line">       return obj;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">//applicationContext.xml的配置。</span><br><span class="line">&lt;bean id=&quot;userDao&quot; class=&quot;study.web.proxyBeanFactory.UserDaoImpl&quot;   /&gt;</span><br><span class="line">   &lt;bean id=&quot;myAspect&quot; class=&quot;study.web.proxyBeanFactory.MyAspect&quot; /&gt;</span><br><span class="line">//配置代理工厂需要用到AOP中的ProxyFactoryBean类，配置其属性：依次是指定代理类实现的接口、指定目标对象、指定植入通知的切面、指定使用cglib代理</span><br><span class="line">   &lt;bean id=&quot;proxyBeanFactory&quot; class=&quot;org.springframework.aop.framework.ProxyFactoryBean&quot;&gt;</span><br><span class="line">       &lt;property name=&quot;proxyInterfaces&quot; value=&quot;study.web.proxyBeanFactory.UserDao&quot; /&gt;</span><br><span class="line">       &lt;property name=&quot;target&quot; ref=&quot;userDao&quot;   /&gt;</span><br><span class="line">       &lt;property name=&quot;interceptorNames&quot; value=&quot;myAspect&quot;  /&gt;</span><br><span class="line">       &lt;property name=&quot;proxyTargetClass&quot; value=&quot;true&quot;  /&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
-<h4 id="AspectJ"><a href="#AspectJ" class="headerlink" title="AspectJ"></a>AspectJ</h4><blockquote>
-<p>1.xml 2.annotation</p>
-</blockquote>
-<p>1：设计Aspect类，实现多个通知方法，在.xml文件中<a href="aop:config" target="_blank" rel="noopener">aop:config</a>中配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;userDao&quot; class=&quot;study.web.aspectj.xml.UserDao&quot;    /&gt;</span><br><span class="line">   &lt;bean id=&quot;myAspect&quot; class=&quot;study.web.aspectj.xml.MyAspect&quot;  /&gt;</span><br><span class="line">   &lt;aop:config&gt;</span><br><span class="line">       &lt;aop:aspect ref=&quot;myAspect&quot;&gt;</span><br><span class="line">           &lt;aop:pointcut id=&quot;myPointcut&quot; expression=&quot;execution(* study.web.aspectj.xml.*.*(..))&quot;   /&gt;</span><br><span class="line">           &lt;aop:before method=&quot;myBefore&quot; pointcut-ref=&quot;myPointcut&quot; /&gt;</span><br><span class="line">           &lt;aop:after-returning method=&quot;myAfterReturning&quot; pointcut-ref=&quot;myPointcut&quot; returning=&quot;retVal&quot;/&gt;</span><br><span class="line">           &lt;aop:around method=&quot;myAround&quot; pointcut-ref=&quot;myPointcut&quot; /&gt;</span><br><span class="line">           &lt;aop:after-throwing method=&quot;myAfterThrowing&quot; pointcut-ref=&quot;myPointcut&quot; throwing=&quot;throwable&quot;    /&gt;</span><br><span class="line">           &lt;aop:after method=&quot;myAfter&quot; pointcut-ref=&quot;myPointcut&quot;   /&gt;</span><br><span class="line">       &lt;/aop:aspect&gt;</span><br><span class="line">   &lt;/aop:config&gt;</span><br></pre></td></tr></table></figure></p>
-<p>2：为目标类添加@Repository,为切面类添加@Aspect，@Component等注解，在.xml配置文件中，使用<a href="context:component-scan" target="_blank" rel="noopener">context:component-scan</a>标签扫描注解，并启用AspectJ支持<a href="aop:aspectj-autoproxy" target="_blank" rel="noopener">aop:aspectj-autoproxy</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//关键注解</span><br><span class="line">@Pointcut(&quot;execution(* study.web.aspectj.annotation.*.*(..))&quot;)</span><br><span class="line">@Before(&quot;myPointcut()&quot;)</span><br><span class="line">@AfterReturning(value = &quot;myPointcut()&quot;,returning = &quot;...&quot;)</span><br><span class="line">@Around(&quot;myPointcut()&quot;)	 </span><br><span class="line">@AfterThrowing(value=&quot;myPointcut()&quot;,throwing=&quot;throwable&quot;)</span><br><span class="line">@After(&quot;myPointcut()&quot;)</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/24/Spring第二次巩固/">展开全文 >></a>
         </p>
       
 
